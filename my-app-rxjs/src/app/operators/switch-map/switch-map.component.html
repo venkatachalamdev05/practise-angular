@@ -1,1 +1,4 @@
-<p>switch-map works!</p>
+<input [formControl]="searchControl" placeholder="Search users...">
+<div *ngFor="let item of users">
+  * {{item.email}}
+</div>

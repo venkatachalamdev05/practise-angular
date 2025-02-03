@@ -7,6 +7,7 @@ import { SubjectComponent } from './operators/subject/subject.component';
 import { SubjectAComponent } from './operators/subject/subject-a/subject-a.component';
 import { SubjectBComponent } from './operators/subject/subject-b/subject-b.component';
 import { SwitchMapComponent } from './operators/switch-map/switch-map.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { SwitchMapComponent } from './operators/switch-map/switch-map.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

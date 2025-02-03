@@ -11,7 +11,13 @@ export class SharedServiceService {
 
   notificationSubject = new Subject<string>()
 
+  $notification = this.notificationSubject.asObservable();
+
   getData(): Observable<any> {
     return this.http.get("https://jsonplaceholder.typicode.com/users")
+  }
+
+  searchData(value: string): Observable<any> {
+    return this.http.get(`https://dummyjson.com/users/search?q=${value}`)
   }
 }
