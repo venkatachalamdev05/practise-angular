@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,10 @@ export class SharedServiceService {
   constructor(private http: HttpClient) { }
 
   notificationSubject = new Subject<string>()
+  notificationBehaviourSubject = new BehaviorSubject<string>("")
+  chatSubject = new ReplaySubject<string>(2);
+
+
 
   $notification = this.notificationSubject.asObservable();
 

@@ -1,2 +1,19 @@
-<p>subject-a works!</p>
-<button (click)="send()">Send Notification</button>
+<div>
+  <p>Subject</p>
+  <button (click)="send()">Send Notification</button>
+</div>
+
+<hr>
+
+<div>
+  <div class="chat-box">
+    <h3>Chat Room</h3>
+    <div *ngFor="let msg of messages" class="message">
+      {{ msg }}
+    </div>
+
+    <input [(ngModel)]="newMessage" placeholder="Type a message..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+
+</div>
