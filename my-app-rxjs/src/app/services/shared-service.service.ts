@@ -10,11 +10,8 @@ export class SharedServiceService {
   constructor(private http: HttpClient) { }
 
   notificationSubject = new Subject<string>()
-  notificationBehaviourSubject = new BehaviorSubject<string>("")
+  authUser = new BehaviorSubject<boolean>(false)
   chatSubject = new ReplaySubject<string>(2);
-
-
-
   $notification = this.notificationSubject.asObservable();
 
   getData(): Observable<any> {
@@ -23,5 +20,13 @@ export class SharedServiceService {
 
   searchData(value: string): Observable<any> {
     return this.http.get(`https://dummyjson.com/users/search?q=${value}`)
+  }
+
+  login(){
+    this.authUser.next(true)
+  }
+
+  logout(){
+    this.authUser.next(false)
   }
 }

@@ -8,6 +8,8 @@ import { SubjectAComponent } from './operators/subject/subject-a/subject-a.compo
 import { SubjectBComponent } from './operators/subject/subject-b/subject-b.component';
 import { SwitchMapComponent } from './operators/switch-map/switch-map.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BehaviourSubjectAComponent } from './operators/subject/behaviour-subject-a/behaviour-subject-a.component';
+import { BehaviourSubjectBComponent } from './operators/subject/behaviour-subject-b/behaviour-subject-b.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SubjectComponent,
     SubjectAComponent,
     SubjectBComponent,
-    SwitchMapComponent
+    SwitchMapComponent,
+    BehaviourSubjectAComponent,
+    BehaviourSubjectBComponent
   ],
   imports: [
     BrowserModule,
